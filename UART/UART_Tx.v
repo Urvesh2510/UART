@@ -13,7 +13,7 @@
   reg [3:0] count;
   reg [10:0] shift;
   reg [3:0] bit_counter;
-  reg [2:0]state=0;
+  reg [3:0]state=0;
   
   parameter START=0,TRANSMISSION=2,IDLE=1,PASS=3,PASS1=4;
 
@@ -57,6 +57,7 @@
          tra_data<=1;
          state<=START;
          end
+   
     IDLE:begin
          Done<=1'b0;
          Busy<=1'b0;
